@@ -2,124 +2,124 @@ const fs = require('fs');
 
 const categories = [
   { 
-    id: 'electrical', name: 'Electrical Essentials', desc: 'Secure, clean, and reliable architectural installations.', img: 'savera-electrical.png',
+    id: 'electrical', name: 'Electrical Essentials', desc: 'Secure, clean, and reliable architectural installations.', img: 'savera-electrical.jpg',
     products: [
-      { name: 'Premium Switch Plate', img: 'premium_switch_plate.png' },
-      { name: 'PVC Conduit Pipe', img: 'pvc_conduit_pipe.png' },
-      { name: 'Modular Fan Box', img: 'modular_fan_box.png' },
-      { name: 'MCB Box', img: 'mcb_box.png' },
-      { name: 'Concealed Housing', img: 'concealed_housing.png' },
-      { name: 'Flame Retardant Wire', img: 'fr_wire.png' }
+      { name: 'Premium Switch Plate', img: 'premium_switch_plate.jpg' },
+      { name: 'PVC Conduit Pipe', img: 'pvc_conduit_pipe.jpg' },
+      { name: 'Modular Fan Box', img: 'modular_fan_box.jpg' },
+      { name: 'MCB Box', img: 'mcb_box.jpg' },
+      { name: 'Concealed Housing', img: 'concealed_housing.jpg' },
+      { name: 'Flame Retardant Wire', img: 'fr_wire.jpg' }
     ]
   },
   { 
-    id: 'frame', name: 'Frame Solutions', desc: 'Sturdy and reliable door frame options with matching premium finishes.', img: 'savera-frame.png',
+    id: 'frame', name: 'Frame Solutions', desc: 'Sturdy and reliable door frame options with matching premium finishes.', img: 'savera-frame.jpg',
     products: [
-      { name: 'Teak Wood Frame', img: 'teak_wood_frame.png' },
-      { name: 'Sal Wood Frame', img: 'sal_wood_frame.png' },
-      { name: 'Aluminum Profile', img: 'aluminum_profile.png' },
-      { name: 'WPC Door Frame', img: 'wpc_door_frame.png' },
-      { name: 'Hardwood Chaukhat', img: 'hardwood_chaukhat.png' },
-      { name: 'UPVC Window Frame', img: 'upvc_window_frame.png' }
+      { name: 'Teak Wood Frame', img: 'teak_wood_frame.jpg' },
+      { name: 'Sal Wood Frame', img: 'sal_wood_frame.jpg' },
+      { name: 'Aluminum Profile', img: 'aluminum_profile.jpg' },
+      { name: 'WPC Door Frame', img: 'wpc_door_frame.jpg' },
+      { name: 'Hardwood Chaukhat', img: 'hardwood_chaukhat.jpg' },
+      { name: 'UPVC Window Frame', img: 'upvc_window_frame.jpg' }
     ]
   },
   { 
-    id: 'entrances', name: 'Entrances', desc: 'Designer wooden, flush, and PVC doors crafted for stunning homes.', img: 'savera-entrances.png',
+    id: 'entrances', name: 'Entrances', desc: 'Designer wooden, flush, and PVC doors crafted for stunning homes.', img: 'savera-entrances.jpg',
     products: [
-      { name: 'Solid Teak Door', img: 'teak_door.png' },
-      { name: 'Premium Flush Door', img: 'flush_door.png' },
-      { name: 'Designer Veneer Door', img: 'veneer_door.png' },
-      { name: 'HDHMR Door', img: 'hdhmr_door.png' },
-      { name: 'Laminated Door', img: 'laminated_door.png' },
-      { name: 'PVC Bathroom Door', img: 'savera-entrances.png' }
+      { name: 'Solid Teak Door', img: 'teak_door.jpg' },
+      { name: 'Premium Flush Door', img: 'flush_door.jpg' },
+      { name: 'Designer Veneer Door', img: 'veneer_door.jpg' },
+      { name: 'HDHMR Door', img: 'hdhmr_door.jpg' },
+      { name: 'Laminated Door', img: 'laminated_door.jpg' },
+      { name: 'PVC Bathroom Door', img: 'savera-entrances.jpg' }
     ]
   },
   { 
-    id: 'hardware', name: 'Precision Fittings', desc: 'Premium locks, handles, hinges, channels, and heavy-duty glass fittings.', img: 'savera-hardware.png',
+    id: 'hardware', name: 'Precision Fittings', desc: 'Premium locks, handles, hinges, channels, and heavy-duty glass fittings.', img: 'savera-hardware.jpg',
     products: [
-      { name: 'Heavy Duty Hinges', img: 'savera-hardware.png' },
-      { name: 'Soft Close Channels', img: 'product-table.png' },
-      { name: 'Glass Door Fittings', img: 'savera-kitchen.png' },
-      { name: 'Mortise Locks', img: 'savera-hardware.png' },
-      { name: 'Premium Handles', img: 'savera-entrances.png' },
-      { name: 'Drawer Slides', img: 'product-table.png' }
+      { name: 'Heavy Duty Hinges', img: 'savera-hardware.jpg' },
+      { name: 'Soft Close Channels', img: 'product-table.jpg' },
+      { name: 'Glass Door Fittings', img: 'savera-kitchen.jpg' },
+      { name: 'Mortise Locks', img: 'savera-hardware.jpg' },
+      { name: 'Premium Handles', img: 'savera-entrances.jpg' },
+      { name: 'Drawer Slides', img: 'product-table.jpg' }
     ]
   },
   { 
-    id: 'power', name: 'Power Controls', desc: 'High-quality wires, elegant switch plates, and advanced electrical controls.', img: 'savera-power.png',
+    id: 'power', name: 'Power Controls', desc: 'High-quality wires, elegant switch plates, and advanced electrical controls.', img: 'savera-power.jpg',
     products: [
-      { name: 'Modular Switches', img: 'savera-power.png' },
-      { name: 'Distribution Boards', img: 'savera-electrical.png' },
-      { name: 'Wire Coils', img: 'savera-power.png' },
-      { name: 'Stabilizers', img: 'product-lamp.png' },
-      { name: 'Smart Touch Switches', img: 'savera-lighting.png' },
-      { name: 'Changeover Switches', img: 'savera-electrical.png' }
+      { name: 'Modular Switches', img: 'savera-power.jpg' },
+      { name: 'Distribution Boards', img: 'savera-electrical.jpg' },
+      { name: 'Wire Coils', img: 'savera-power.jpg' },
+      { name: 'Stabilizers', img: 'product-lamp.jpg' },
+      { name: 'Smart Touch Switches', img: 'savera-lighting.jpg' },
+      { name: 'Changeover Switches', img: 'savera-electrical.jpg' }
     ]
   },
   { 
-    id: 'lighting', name: 'Lighting', desc: 'Curated lighting choices for warm ceilings, bright kitchens, and display areas.', img: 'savera-lighting.png',
+    id: 'lighting', name: 'Lighting', desc: 'Curated lighting choices for warm ceilings, bright kitchens, and display areas.', img: 'savera-lighting.jpg',
     products: [
-      { name: 'LED Panel Lights', img: 'savera-lighting.png' },
-      { name: 'Profile Lighting', img: 'product-lamp.png' },
-      { name: 'Spotlights', img: 'savera-lighting.png' },
-      { name: 'Modern Chandelier', img: 'product-lamp.png' },
-      { name: 'Wall Sconces', img: 'savera-lighting.png' },
-      { name: 'Track Lights', img: 'savera-power.png' }
+      { name: 'LED Panel Lights', img: 'savera-lighting.jpg' },
+      { name: 'Profile Lighting', img: 'product-lamp.jpg' },
+      { name: 'Spotlights', img: 'savera-lighting.jpg' },
+      { name: 'Modern Chandelier', img: 'product-lamp.jpg' },
+      { name: 'Wall Sconces', img: 'savera-lighting.jpg' },
+      { name: 'Track Lights', img: 'savera-power.jpg' }
     ]
   },
   { 
-    id: 'paints', name: 'Colour Finishes', desc: 'Luxury wall paints, rich textures, waterproofing, and beautifully refined colour finishes.', img: 'savera-paints.png',
+    id: 'paints', name: 'Colour Finishes', desc: 'Luxury wall paints, rich textures, waterproofing, and beautifully refined colour finishes.', img: 'savera-paints.jpg',
     products: [
-      { name: 'Exterior Emulsion', img: 'savera-paints.png' },
-      { name: 'Interior Luxury Paint', img: 'savera-paints.png' },
-      { name: 'Wood Polish', img: 'product-table.png' },
-      { name: 'Texture Paint', img: 'savera-paints.png' },
-      { name: 'Enamel Gloss', img: 'savera-kitchen.png' },
-      { name: 'Waterproofing Primer', img: 'savera-paints.png' }
+      { name: 'Exterior Emulsion', img: 'savera-paints.jpg' },
+      { name: 'Interior Luxury Paint', img: 'savera-paints.jpg' },
+      { name: 'Wood Polish', img: 'product-table.jpg' },
+      { name: 'Texture Paint', img: 'savera-paints.jpg' },
+      { name: 'Enamel Gloss', img: 'savera-kitchen.jpg' },
+      { name: 'Waterproofing Primer', img: 'savera-paints.jpg' }
     ]
   },
   { 
-    id: 'kitchen', name: 'Smart Storage', desc: 'Modular kitchen baskets, smooth channels, modern handles, and pull-outs.', img: 'savera-kitchen.png',
+    id: 'kitchen', name: 'Smart Storage', desc: 'Modular kitchen baskets, smooth channels, modern handles, and pull-outs.', img: 'savera-kitchen.jpg',
     products: [
-      { name: 'Tandem Boxes', img: 'savera-kitchen.png' },
-      { name: 'Cutlery Organizers', img: 'product-table.png' },
-      { name: 'Corner Pull-outs', img: 'savera-hardware.png' },
-      { name: 'Pantry Tall Unit', img: 'savera-kitchen.png' },
-      { name: 'Wicker Baskets', img: 'product-bookshelf.png' },
-      { name: 'Under-sink Organizers', img: 'savera-kitchen.png' }
+      { name: 'Tandem Boxes', img: 'savera-kitchen.jpg' },
+      { name: 'Cutlery Organizers', img: 'product-table.jpg' },
+      { name: 'Corner Pull-outs', img: 'savera-hardware.jpg' },
+      { name: 'Pantry Tall Unit', img: 'savera-kitchen.jpg' },
+      { name: 'Wicker Baskets', img: 'product-bookshelf.jpg' },
+      { name: 'Under-sink Organizers', img: 'savera-kitchen.jpg' }
     ]
   },
   { 
-    id: 'bedroom', name: 'Bedroom Solutions', desc: 'Durable materials and soft-close fittings for elegant wardrobes and custom beds.', img: 'product-chair.png',
+    id: 'bedroom', name: 'Bedroom Solutions', desc: 'Durable materials and soft-close fittings for elegant wardrobes and custom beds.', img: 'product-chair.jpg',
     products: [
-      { name: 'Sliding Wardrobe Channels', img: 'savera-hardware.png' },
-      { name: 'Hydraulic Bed Fittings', img: 'product-chair.png' },
-      { name: 'Profile Wardrobe Handles', img: 'product-table.png' },
-      { name: 'Mirror Fittings', img: 'savera-entrances.png' },
-      { name: 'Soft Close Hinges', img: 'savera-hardware.png' },
-      { name: 'Wardrobe Lifts', img: 'product-chair.png' }
+      { name: 'Sliding Wardrobe Channels', img: 'savera-hardware.jpg' },
+      { name: 'Hydraulic Bed Fittings', img: 'product-chair.jpg' },
+      { name: 'Profile Wardrobe Handles', img: 'product-table.jpg' },
+      { name: 'Mirror Fittings', img: 'savera-entrances.jpg' },
+      { name: 'Soft Close Hinges', img: 'savera-hardware.jpg' },
+      { name: 'Wardrobe Lifts', img: 'product-chair.jpg' }
     ]
   },
   { 
-    id: 'decorative', name: 'Decorative Finish', desc: 'Exquisite decorative surfaces, veneers, laminates, and metallic finishing accents.', img: 'product-lamp.png',
+    id: 'decorative', name: 'Decorative Finish', desc: 'Exquisite decorative surfaces, veneers, laminates, and metallic finishing accents.', img: 'product-lamp.jpg',
     products: [
-      { name: 'Premium Veneer', img: 'product-table.png' },
-      { name: 'High Gloss Laminate', img: 'savera-entrances.png' },
-      { name: 'Fluted Panels', img: 'savera-frame.png' },
-      { name: 'Charcoal Louvers', img: 'product-lamp.png' },
-      { name: 'Metallic Laminates', img: 'savera-paints.png' },
-      { name: 'Acrylic Sheets', img: 'product-table.png' }
+      { name: 'Premium Veneer', img: 'product-table.jpg' },
+      { name: 'High Gloss Laminate', img: 'savera-entrances.jpg' },
+      { name: 'Fluted Panels', img: 'savera-frame.jpg' },
+      { name: 'Charcoal Louvers', img: 'product-lamp.jpg' },
+      { name: 'Metallic Laminates', img: 'savera-paints.jpg' },
+      { name: 'Acrylic Sheets', img: 'product-table.jpg' }
     ]
   },
   { 
-    id: 'accessories', name: 'Finishing Details', desc: 'Essential finishing accessories for doors, custom cabinets, and smart storage units.', img: 'product-table.png',
+    id: 'accessories', name: 'Finishing Details', desc: 'Essential finishing accessories for doors, custom cabinets, and smart storage units.', img: 'product-table.jpg',
     products: [
-      { name: 'Door Stoppers', img: 'savera-hardware.png' },
-      { name: 'Tower Bolts', img: 'product-table.png' },
-      { name: 'Magnetic Catchers', img: 'savera-entrances.png' },
-      { name: 'Drawer Knobs', img: 'product-lamp.png' },
-      { name: 'Edge Banding', img: 'savera-kitchen.png' },
-      { name: 'Concealed Handles', img: 'product-table.png' }
+      { name: 'Door Stoppers', img: 'savera-hardware.jpg' },
+      { name: 'Tower Bolts', img: 'product-table.jpg' },
+      { name: 'Magnetic Catchers', img: 'savera-entrances.jpg' },
+      { name: 'Drawer Knobs', img: 'product-lamp.jpg' },
+      { name: 'Edge Banding', img: 'savera-kitchen.jpg' },
+      { name: 'Concealed Handles', img: 'product-table.jpg' }
     ]
   }
 ];
