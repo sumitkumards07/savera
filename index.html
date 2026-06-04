@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Savera Enterprises is a premium architectural showroom offering designer doors, modular kitchens, luxury paints, heavy-duty hardware, and structural materials for your dream home.">
+  <meta name="keywords" content="Savera Enterprises, premium plywood, designer doors, modular kitchen, luxury paints, hardware showroom, architectural materials, interior design supplies, switch plates, flush doors, laminates, veneers">
+  <meta name="author" content="Savera Enterprises">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.saveraenterprises.com/">
+  <meta property="og:title" content="Savera Enterprises | Premium Architectural Materials">
+  <meta property="og:description" content="From core structural boards to the last visible handle, Savera brings premium materials and practical selection guidance into one architectural showroom experience.">
+  <meta property="og:image" content="https://www.saveraenterprises.com/public/savera-entrances.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://www.saveraenterprises.com/">
+  <meta name="twitter:title" content="Savera Enterprises | Premium Architectural Materials">
+  <meta name="twitter:description" content="Discover luxury doors, hardware, paints, and modular kitchens at Savera Enterprises.">
+  <meta name="twitter:image" content="https://www.saveraenterprises.com/public/savera-entrances.png">
+
+  <title>Savera Enterprises | Premium Architectural Materials & Hardware Showroom</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Savera specific adjustments */
+    .savera-stats {
+      display: flex; gap: 3rem; margin-top: 3rem;
+    }
+    .stat-val {
+      font-family: var(--font-serif);
+      font-size: 2.5rem;
+      color: var(--sage-green);
+    }
+    .stat-label {
+      font-weight: 500;
+      color: #555;
+    }
+    @media (max-width: 768px) {
+      .savera-stats { flex-direction: column; gap: 1.5rem; }
+    }
+    .clean-card { cursor: pointer; }
+    .clean-card .product-img-wrapper { position: relative; overflow: hidden; border-radius: 20px; aspect-ratio: 4/5; }
+    .clean-card .product-img { transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); display: block; width: 100%; height: 100%; object-fit: cover; }
+    .clean-card:hover .product-img { transform: scale(1.05); }
+    .card-overlay { position: absolute; bottom: 0; left: 0; width: 100%; height: 60%; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); pointer-events: none; z-index: 1; }
+    .clean-card .product-title { position: absolute; bottom: 1.5rem; left: 1.5rem; color: white; margin: 0; font-size: 1.5rem; z-index: 2; font-family: var(--font-serif); }
+    .view-now-btn { position: absolute; bottom: 1.5rem; right: 1.5rem; background: white; color: var(--charcoal); padding: 0.6rem 1.2rem; border-radius: 100px; font-weight: 600; font-family: var(--font-sans); opacity: 0; transform: translateY(10px); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 10px 30px rgba(0,0,0,0.08); z-index: 10; font-size: 0.85rem; }
+    .clean-card:hover .view-now-btn { opacity: 1; transform: translateY(0); }
+    .hero-image.slide { position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 1s ease-in-out, transform 4s linear; transform: scale(1.05); }
+    .hero-image.slide.active { opacity: 1; transform: scale(1); z-index: 2; }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo">
+      <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px; height:24px;">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+      </svg>
+      <span class="logo-text">Savera</span>
+    </div>
+    <div class="nav-links">
+      <a href="#products">Products</a>
+      <a href="#promise">Why Savera</a>
+      <a href="#materials">Materials</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#visit" class="nav-cta" style="background-color: var(--charcoal); color: white; padding: 0.6rem 1.2rem; border-radius: 100px; font-weight: 600;">Visit Showroom</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <main class="hero-content" style="min-height: 85vh;">
+    <!-- Left Column: Content -->
+    <div class="left-col" style="padding-bottom: 4rem;">
+      <p style="text-transform: uppercase; letter-spacing: 2px; color: var(--sage-green); margin-bottom: 1.5rem; font-weight: 600;">Savera Enterprises</p>
+      <div class="headline">
+        <h1 class="line-one muted-green" style="font-size: 4rem;">Where Every Home</h1>
+        <h1 class="line-two charcoal-bold" style="font-size: 4rem;">Finds Its Character</h1>
+      </div>
+      
+      <p style="font-size: 1.2rem; color: #555; margin-top: 2rem;">Plywood · Doors · Hardware · Paints · Modular Kitchen</p>
+
+      <!-- Stats -->
+      <div class="savera-stats">
+        <div>
+          <div class="stat-val">200+</div>
+          <div class="stat-label">Brands Available</div>
+        </div>
+        <div>
+          <div class="stat-val">15+</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div>
+          <div class="stat-val">5,000+</div>
+          <div class="stat-label">Happy Customers</div>
+        </div>
+      </div>
+      
+      <div style="margin-top: 3.5rem; display: flex; gap: 1.5rem; align-items: center;">
+        <a href="#products" style="background: var(--charcoal); color: white; padding: 1.2rem 2.5rem; border-radius: 100px; text-decoration: none; font-weight: 500; transition: background 0.3s;" onmouseover="this.style.background='var(--sage-green)'" onmouseout="this.style.background='var(--charcoal)'">Explore Products &rarr;</a>
+        <a href="#visit" style="color: var(--charcoal); font-weight: 600; text-decoration: none;">Visit Showroom</a>
+      </div>
+    </div>
+    
+    <!-- Right Column: Hero Image Slider -->
+    <div class="right-col">
+      <div class="hero-image-container">
+        <img src="./public/savera-entrances.png" alt="Designer Doors" class="hero-image slide active">
+        <img src="./public/savera-kitchen.png" alt="Modular Kitchen" class="hero-image slide">
+        <img src="./public/savera-hardware.png" alt="Hardware" class="hero-image slide">
+        <img src="./public/savera-paints.png" alt="Paints" class="hero-image slide">
+      </div>
+    </div>
+  </main>
+
+  <!-- Product Categories Section -->
+  <section id="products" class="products-section">
+    <div class="section-header" style="max-width: 800px; margin: 0 auto 4rem auto; text-align: center;">
+      <h2 class="section-title">Product Categories</h2>
+    </div>
+    
+    <div class="products-grid">
+      <!-- Category 1 -->
+      <div class="product-card clean-card" onclick="window.location.href='category-electrical.html'">
+        <div class="product-img-wrapper">
+          <img src="./public/savera-electrical.png" alt="Electrical Essentials" class="product-img">
+          <div class="card-overlay"></div>
+          <h3 class="product-title">Electrical Essentials</h3>
+          <div class="view-now-btn">View Now &rarr;</div>
+        </div>
+      </div>
+      <!-- Category 2 -->
+      <div class="product-card clean-card" onclick="window.location.href='category-frame.html'">
+        <div class="product-img-wrapper">
+          <img src="./public/savera-frame.png" alt="Frame Solutions" class="product-img">
+          <div class="card-overlay"></div>
+          <h3 class="product-title">Frame Solutions</h3>
+          <div class="view-now-btn">View Now &rarr;</div>
+        </div>
+      </div>
+      <!-- Category 3 -->
+      <div class="product-card clean-card" onclick="window.location.href='category-entrances.html'">
+        <div class="product-img-wrapper">
+          <img src="./public/savera-entrances.png" alt="Entrances" class="product-img">
+          <div class="card-overlay"></div>
+          <h3 class="product-title">Entrances</h3>
+          <div class="view-now-btn">View Now &rarr;</div>
+        </div>
+      </div>
+      <!-- Category 4 -->
+      <div class="product-card clean-card" onclick="window.location.href='category-hardware.html'">
+        <div class="product-img-wrapper">
+          <img src="./public/savera-hardware.png" alt="Precision Fittings" class="product-img">
+          <div class="card-overlay"></div>
+          <h3 class="product-title">Precision Fittings</h3>
+          <div class="view-now-btn">View Now &rarr;</div>
+        </div>
+      </div>
+      <!-- Category 5 -->
+      <div class="product-card clean-card" onclick="window.location.href='category-power.html'">
+        <div class="product-img-wrapper">
+          <img src="./public/savera-power.png" alt="Power Controls" class="product-img">
+          <div class="card-overlay"></div>
+          <h3 class="product-title">Power Controls</h3>
+          <div class="view-now-btn">View Now &rarr;</div>
+        </div>
+      </div>
+      <!-- Category 6 -->
+      <div class="product-card clean-card" onclick="window.location.href='category-lighting.html'">
+        <div class="product-img-wrapper">
+          <img src="./public/savera-lighting.png" alt="Lighting" class="product-img">
+          <div class="card-overlay"></div>
+          <h3 class="product-title">Lighting</h3>
+          <div class="view-now-btn">View Now &rarr;</div>
+        </div>
+      </div>
+      <!-- Category 7 -->
+      <div class="product-card clean-card" onclick="window.location.href='category-paints.html'">
+        <div class="product-img-wrapper">
+          <img src="./public/savera-paints.png" alt="Colour Finishes" class="product-img">
+          <div class="card-overlay"></div>
+          <h3 class="product-title">Colour Finishes</h3>
+          <div class="view-now-btn">View Now &rarr;</div>
+        </div>
+      </div>
+      <!-- Category 8 -->
+      <div class="product-card clean-card" onclick="window.location.href='category-kitchen.html'">
+        <div class="product-img-wrapper">
+          <img src="./public/savera-kitchen.png" alt="Smart Storage" class="product-img">
+          <div class="card-overlay"></div>
+          <h3 class="product-title">Smart Storage</h3>
+          <div class="view-now-btn">View Now &rarr;</div>
+        </div>
+      </div>
+      <!-- Category 9 -->
+      <div class="product-card clean-card" onclick="window.location.href='category-bedroom.html'">
+        <div class="product-img-wrapper">
+          <img src="./public/product-chair.png" alt="Bedroom Solutions" class="product-img">
+          <div class="card-overlay"></div>
+          <h3 class="product-title">Bedroom Solutions</h3>
+          <div class="view-now-btn">View Now &rarr;</div>
+        </div>
+      </div>
+      <!-- Category 10 -->
+      <div class="product-card clean-card" onclick="window.location.href='category-decorative.html'">
+        <div class="product-img-wrapper">
+          <img src="./public/product-lamp.png" alt="Decorative Finish" class="product-img">
+          <div class="card-overlay"></div>
+          <h3 class="product-title">Decorative Finish</h3>
+          <div class="view-now-btn">View Now &rarr;</div>
+        </div>
+      </div>
+      <!-- Category 11 -->
+      <div class="product-card clean-card" onclick="window.location.href='category-accessories.html'">
+        <div class="product-img-wrapper">
+          <img src="./public/product-table.png" alt="Finishing Details" class="product-img">
+          <div class="card-overlay"></div>
+          <h3 class="product-title">Finishing Details</h3>
+          <div class="view-now-btn">View Now &rarr;</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Promise Section -->
+  <section id="promise" class="about-section">
+    <div class="about-grid">
+      <div class="about-img-container" style="background-color: var(--sage-green); padding: 4rem; display: flex; align-items: center; justify-content: center; text-align: center; color: white;">
+        <div>
+          <h2 class="section-title" style="color: white; font-size: 2.5rem; margin-bottom: 1.5rem;">Our Promise</h2>
+          <p style="font-size: 1.15rem; line-height: 1.6; opacity: 0.9;">
+            Everything your home deserves — under one roof. We help you compare quality, finish and compatibility before anything reaches the site.
+          </p>
+        </div>
+      </div>
+      <div class="about-content">
+        <ul class="features-list">
+          <li>
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg></div>
+            <div>
+              <span style="display:block; font-weight: 600; font-size: 1.2rem; color: var(--charcoal);">Trusted Brand Selection</span>
+              <span style="display:block; font-weight: 400; font-size: 1rem; color: #666; margin-top: 0.25rem;">Premium plywood, paint, hardware chosen for real homes.</span>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg></div>
+            <div>
+              <span style="display:block; font-weight: 600; font-size: 1.2rem; color: var(--charcoal);">Complete Interior Stack</span>
+              <span style="display:block; font-weight: 400; font-size: 1rem; color: #666; margin-top: 0.25rem;">Boards, doors, locks, paints, kitchen fittings all in one journey.</span>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg></div>
+            <div>
+              <span style="display:block; font-weight: 600; font-size: 1.2rem; color: var(--charcoal);">Architectural Guidance</span>
+              <span style="display:block; font-weight: 400; font-size: 1rem; color: #666; margin-top: 0.25rem;">Practical help with finishes and compatibility.</span>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg></div>
+            <div>
+              <span style="display:block; font-weight: 600; font-size: 1.2rem; color: var(--charcoal);">Showroom Confidence</span>
+              <span style="display:block; font-weight: 400; font-size: 1rem; color: #666; margin-top: 0.25rem;">See, compare and feel materials before committing.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feel The Materials -->
+  <section id="materials" class="about-section" style="background-color: var(--bg-color);">
+    <div class="about-grid">
+      <div class="about-content">
+        <p style="text-transform: uppercase; letter-spacing: 2px; color: var(--sage-green); font-weight: 600;">Feel The Materials</p>
+        <h2 class="section-title">Crafted for homes that deserve more.</h2>
+        <p class="about-desc">A material-led experience for customers who want to understand the grain, sheen, depth and strength behind every selection.</p>
+      </div>
+      <div class="about-img-container">
+        <img src="./public/lifestyle-about.png" alt="Bright organic living room" class="about-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Gallery Section -->
+  <section id="gallery" class="products-section" style="background-color: white;">
+    <div class="section-header" style="max-width: 800px; margin: 0 auto 4rem auto; text-align: center;">
+      <h2 class="section-title">Project Gallery</h2>
+      <p style="font-size: 1.15rem; color: #555; line-height: 1.6; margin-top: 1.5rem;">
+        Installed details, edited like a design journal. Explore Savera's completed customer interiors.
+      </p>
+      
+      <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 3rem; flex-wrap: wrap;">
+        <button style="padding: 0.8rem 2rem; border-radius: 100px; border: none; background: var(--charcoal); color: white; cursor:pointer; font-weight: 500; font-family: var(--font-sans);">All</button>
+        <button style="padding: 0.8rem 2rem; border-radius: 100px; border: 1px solid #ddd; background: transparent; cursor:pointer; font-weight: 500; font-family: var(--font-sans);">Kitchen</button>
+        <button style="padding: 0.8rem 2rem; border-radius: 100px; border: 1px solid #ddd; background: transparent; cursor:pointer; font-weight: 500; font-family: var(--font-sans);">Bathroom</button>
+        <button style="padding: 0.8rem 2rem; border-radius: 100px; border: 1px solid #ddd; background: transparent; cursor:pointer; font-weight: 500; font-family: var(--font-sans);">Living</button>
+        <button style="padding: 0.8rem 2rem; border-radius: 100px; border: 1px solid #ddd; background: transparent; cursor:pointer; font-weight: 500; font-family: var(--font-sans);">Bedroom</button>
+      </div>
+    </div>
+    
+    <div class="three-col-grid">
+      <div class="category-card" style="aspect-ratio: 4/5; position: relative; border-radius: 20px; overflow: hidden;">
+        <img src="./public/kitchen-set.png" alt="Kitchen Project" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+      <div class="category-card" style="aspect-ratio: 4/5; position: relative; border-radius: 20px; overflow: hidden;">
+        <img src="./public/living-room.png" alt="Living Room Project" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+      <div class="category-card" style="aspect-ratio: 4/5; position: relative; border-radius: 20px; overflow: hidden;">
+        <img src="./public/bedroom.png" alt="Bedroom Project" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Words -->
+  <section class="products-section" style="background-color: var(--bg-color);">
+    <div class="section-header" style="text-align: center; margin-bottom: 4rem; max-width: 100%;">
+      <h2 class="section-title">Customer Words</h2>
+      <p style="font-size: 1.2rem; color: #555;">Trust, finished beautifully.</p>
+    </div>
+    
+    <div class="three-col-grid">
+      <div style="background: white; padding: 3rem; border-radius: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
+        <p style="font-family: var(--font-serif); font-size: 1.4rem; line-height: 1.5; margin-bottom: 2rem; color: var(--charcoal);">"Savera helped us match plywood, hardware and kitchen fittings without running to five different markets. The showroom experience felt premium and very practical."</p>
+        <p style="font-weight: 600; color: var(--charcoal);">Aditya Kumar</p>
+        <p style="font-size: 0.95rem; color: #666; margin-top: 0.2rem;">3BHK Renovation · Boring Road</p>
+      </div>
+      <div style="background: var(--charcoal); padding: 3rem; border-radius: 30px; color: white;">
+        <p style="font-family: var(--font-serif); font-size: 1.4rem; line-height: 1.5; margin-bottom: 2rem;">"For my client projects, I need dependable materials and fast clarity. Their team understands finishes, brands and what actually works on site."</p>
+        <p style="font-weight: 600;">Neha Singh</p>
+        <p style="font-size: 0.95rem; color: rgba(255,255,255,0.7); margin-top: 0.2rem;">Interior Architect · Kankarbagh</p>
+      </div>
+      <div style="background: white; padding: 3rem; border-radius: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
+        <p style="font-family: var(--font-serif); font-size: 1.4rem; line-height: 1.5; margin-bottom: 2rem; color: var(--charcoal);">"The biggest value was confidence. We could see the materials, compare finishes and take decisions with the family in one visit."</p>
+        <p style="font-weight: 600; color: var(--charcoal);">Rajeev Ranjan</p>
+        <p style="font-size: 0.95rem; color: #666; margin-top: 0.2rem;">New Home Build · Bailey Road</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / Visit Us Today -->
+  <section id="visit" class="newsletter-section" style="background-color: white;">
+    <div class="newsletter-container">
+      <div class="newsletter-content" style="text-align: center;">
+        <h2 class="newsletter-title" style="margin-bottom: 1.5rem;">Your dream home starts at Savera.</h2>
+        <p class="newsletter-desc" style="font-size: 1.2rem; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+          Mon-Sun · 9:00 AM - 8:00 PM<br><br>
+          123 Premium Market Road, Near City Mall, Patna, Bihar
+        </p>
+        
+        <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+          <a href="#" style="background: white; color: var(--sage-green); padding: 1.2rem 3rem; border-radius: 100px; text-decoration: none; font-weight: 600; font-family: var(--font-sans); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Visit Showroom &rarr;</a>
+          <a href="#" style="border: 2px solid white; color: white; padding: 1.2rem 3rem; border-radius: 100px; text-decoration: none; font-weight: 600; font-family: var(--font-sans); transition: background 0.3s, color 0.3s;" onmouseover="this.style.background='white'; this.style.color='var(--sage-green)';" onmouseout="this.style.background='transparent'; this.style.color='white';">Call the Showroom</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <svg class="logo-icon footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          </svg>
+          <span class="logo-text footer-text">Savera Enterprises</span>
+        </div>
+        <p class="footer-desc">Premium hardware, plywood, interior, modular kitchen and home solutions showroom for homeowners, designers and contractors in Patna.</p>
+      </div>
+      
+      <div class="footer-links">
+        <h4 class="footer-heading">Quick Links</h4>
+        <a href="#products">Products</a>
+        <a href="#promise">Why Savera</a>
+        <a href="#materials">Materials</a>
+        <a href="#gallery">Gallery</a>
+      </div>
+      
+      <div class="footer-links">
+        <h4 class="footer-heading">Product Categories</h4>
+        <a href="#">Plywood & Boards</a>
+        <a href="#">Doors</a>
+        <a href="#">Hardware</a>
+        <a href="#">Modular Kitchen</a>
+      </div>
+      
+      <div class="footer-links">
+        <h4 class="footer-heading">Contact</h4>
+        <a href="#">+91 98765 43210</a>
+        <a href="#">Visit Showroom</a>
+        <a href="#">Near City Mall, Patna</a>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2026 Savera Enterprises. All Rights Reserved. Designed with ♥ in Patna</p>
+      <div class="footer-social">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">Google Maps</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Animation Libraries (Lenis for smooth scroll, GSAP for animations) -->
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  
+  <script>
+    // 1. Initialize Smooth Scroll (Lenis)
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      direction: 'vertical',
+      gestureDirection: 'vertical',
+      smooth: true,
+      mouseMultiplier: 1,
+      smoothTouch: false,
+      touchMultiplier: 2,
+      infinite: false,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    // 2. GSAP Animations Removed
+    // Hero Slideshow
+    const slides = document.querySelectorAll('.slide');
+    if(slides.length > 0) {
+      let currentSlide = 0;
+      setInterval(() => {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+      }, 4000);
+    }
+  </script>
+</body>
+</html>
