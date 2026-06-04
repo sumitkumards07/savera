@@ -148,7 +148,7 @@
           <div class="view-now-btn">View Now &rarr;
         <!-- Duplicates for seamless infinite scroll -->
 
-        <div class="product-card clean-card" onclick="window.location.href='category-frame.html'">
+        <div class="product-card duplicate-card clean-card" onclick="window.location.href='category-frame.html'">
         <div class="product-img-wrapper">
           <img src="./images/savera-frame.jpg" alt="Frame Solutions" class="product-img" loading="lazy">
           <div class="card-overlay"></div>
@@ -184,7 +184,7 @@
           <div class="view-now-btn">View Now &rarr;
         <!-- Duplicates for seamless infinite scroll -->
 
-        <div class="product-card clean-card" onclick="window.location.href='category-entrances.html'">
+        <div class="product-card duplicate-card clean-card" onclick="window.location.href='category-entrances.html'">
         <div class="product-img-wrapper">
           <img src="./images/savera-entrances.jpg" alt="Entrances" class="product-img" loading="lazy">
           <div class="card-overlay"></div>
@@ -227,7 +227,7 @@
           <div class="view-now-btn">View Now &rarr;
         <!-- Duplicates for seamless infinite scroll -->
 
-        <div class="product-card clean-card" onclick="window.location.href='category-hardware.html'">
+        <div class="product-card duplicate-card clean-card" onclick="window.location.href='category-hardware.html'">
         <div class="product-img-wrapper">
           <img src="./images/savera-hardware.jpg" alt="Precision Fittings" class="product-img" loading="lazy">
           <div class="card-overlay"></div>
@@ -591,7 +591,7 @@
         });
 
         const autoScroll = () => {
-          if (!isHovered) {
+          if (!isHovered && window.innerWidth <= 768) {
             track.scrollLeft += 1;
             
             // Seamless loop: if scrolled past halfway, jump back to 0
