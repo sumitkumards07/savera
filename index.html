@@ -12,14 +12,14 @@
   <meta property="og:url" content="https://www.saveraenterprises.com/">
   <meta property="og:title" content="Savera Enterprises | Premium Architectural Materials">
   <meta property="og:description" content="From core structural boards to the last visible handle, Savera brings premium materials and practical selection guidance into one architectural showroom experience.">
-  <meta property="og:image" content="https://www.saveraenterprises.com/public/savera-entrances.png">
+  <meta property="og:image" content="https://www.saveraenterprises.com/images/savera-entrances.png">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://www.saveraenterprises.com/">
   <meta name="twitter:title" content="Savera Enterprises | Premium Architectural Materials">
   <meta name="twitter:description" content="Discover luxury doors, hardware, paints, and modular kitchens at Savera Enterprises.">
-  <meta name="twitter:image" content="https://www.saveraenterprises.com/public/savera-entrances.png">
+  <meta name="twitter:image" content="https://www.saveraenterprises.com/images/savera-entrances.png">
 
   <title>Savera Enterprises | Premium Architectural Materials & Hardware Showroom</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -37,9 +37,6 @@
     .stat-label {
       font-weight: 500;
       color: #555;
-    }
-    @media (max-width: 768px) {
-      .savera-stats { flex-direction: column; gap: 1.5rem; }
     }
     .clean-card { cursor: pointer; }
     .clean-card .product-img-wrapper { position: relative; overflow: hidden; border-radius: 20px; aspect-ratio: 4/5; }
@@ -76,31 +73,46 @@
   <main class="hero-content" style="min-height: 85vh;">
     <!-- Left Column: Content -->
     <div class="left-col" style="padding-bottom: 4rem;">
-      <p style="text-transform: uppercase; letter-spacing: 2px; color: var(--sage-green); margin-bottom: 1.5rem; font-weight: 600;">Savera Enterprises</p>
+      <p class="brand-subtitle" style="text-transform: uppercase; letter-spacing: 2px; color: var(--sage-green); margin-bottom: 1.5rem; font-weight: 600;">Savera Enterprises</p>
       <div class="headline">
         <h1 class="line-one muted-green" style="font-size: 4rem;">Where Every Home</h1>
         <h1 class="line-two charcoal-bold" style="font-size: 4rem;">Finds Its Character</h1>
       </div>
       
-      <p style="font-size: 1.2rem; color: #555; margin-top: 2rem;">Plywood · Doors · Hardware · Paints · Modular Kitchen</p>
+      <p class="hero-desc" style="font-size: 1.2rem; color: #555; margin-top: 2rem;">Plywood · Doors · Hardware · Paints · Modular Kitchen</p>
 
       <!-- Stats -->
       <div class="savera-stats">
-        <div>
-          <div class="stat-val">200+</div>
-          <div class="stat-label">Brands Available</div>
-        </div>
-        <div>
-          <div class="stat-val">15+</div>
-          <div class="stat-label">Years Experience</div>
-        </div>
-        <div>
-          <div class="stat-val">5,000+</div>
-          <div class="stat-label">Happy Customers</div>
+        <div class="savera-stats-inner">
+          <div>
+            <div class="stat-val">200+</div>
+            <div class="stat-label">Brands Available</div>
+          </div>
+          <div>
+            <div class="stat-val">15+</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div>
+            <div class="stat-val">5,000+</div>
+            <div class="stat-label">Happy Customers</div>
+          </div>
+          <!-- Duplicate for seamless marquee -->
+          <div>
+            <div class="stat-val">200+</div>
+            <div class="stat-label">Brands Available</div>
+          </div>
+          <div>
+            <div class="stat-val">15+</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div>
+            <div class="stat-val">5,000+</div>
+            <div class="stat-label">Happy Customers</div>
+          </div>
         </div>
       </div>
       
-      <div style="margin-top: 3.5rem; display: flex; gap: 1.5rem; align-items: center;">
+      <div class="mobile-cta-group" style="margin-top: 3.5rem; display: flex; gap: 1.5rem; align-items: center;">
         <a href="#products" style="background: var(--charcoal); color: white; padding: 1.2rem 2.5rem; border-radius: 100px; text-decoration: none; font-weight: 500; transition: background 0.3s;" onmouseover="this.style.background='var(--sage-green)'" onmouseout="this.style.background='var(--charcoal)'">Explore Products &rarr;</a>
         <a href="#visit" style="color: var(--charcoal); font-weight: 600; text-decoration: none;">Visit Showroom</a>
       </div>
@@ -109,10 +121,10 @@
     <!-- Right Column: Hero Image Slider -->
     <div class="right-col">
       <div class="hero-image-container">
-        <img src="./public/savera-entrances.png" alt="Designer Doors" class="hero-image slide active">
-        <img src="./public/savera-kitchen.png" alt="Modular Kitchen" class="hero-image slide">
-        <img src="./public/savera-hardware.png" alt="Hardware" class="hero-image slide">
-        <img src="./public/savera-paints.png" alt="Paints" class="hero-image slide">
+        <img src="./images/savera-entrances.png" alt="Designer Doors" class="hero-image slide active">
+        <img src="./images/savera-kitchen.png" alt="Modular Kitchen" class="hero-image slide">
+        <img src="./images/savera-hardware.png" alt="Hardware" class="hero-image slide">
+        <img src="./images/savera-paints.png" alt="Paints" class="hero-image slide">
       </div>
     </div>
   </main>
@@ -127,7 +139,7 @@
       <!-- Category 1 -->
       <div class="product-card clean-card" onclick="window.location.href='category-electrical.html'">
         <div class="product-img-wrapper">
-          <img src="./public/savera-electrical.png" alt="Electrical Essentials" class="product-img">
+          <img src="./images/savera-electrical.png" alt="Electrical Essentials" class="product-img">
           <div class="card-overlay"></div>
           <h3 class="product-title">Electrical Essentials</h3>
           <div class="view-now-btn">View Now &rarr;</div>
@@ -136,7 +148,7 @@
       <!-- Category 2 -->
       <div class="product-card clean-card" onclick="window.location.href='category-frame.html'">
         <div class="product-img-wrapper">
-          <img src="./public/savera-frame.png" alt="Frame Solutions" class="product-img">
+          <img src="./images/savera-frame.png" alt="Frame Solutions" class="product-img">
           <div class="card-overlay"></div>
           <h3 class="product-title">Frame Solutions</h3>
           <div class="view-now-btn">View Now &rarr;</div>
@@ -145,7 +157,7 @@
       <!-- Category 3 -->
       <div class="product-card clean-card" onclick="window.location.href='category-entrances.html'">
         <div class="product-img-wrapper">
-          <img src="./public/savera-entrances.png" alt="Entrances" class="product-img">
+          <img src="./images/savera-entrances.png" alt="Entrances" class="product-img">
           <div class="card-overlay"></div>
           <h3 class="product-title">Entrances</h3>
           <div class="view-now-btn">View Now &rarr;</div>
@@ -154,7 +166,7 @@
       <!-- Category 4 -->
       <div class="product-card clean-card" onclick="window.location.href='category-hardware.html'">
         <div class="product-img-wrapper">
-          <img src="./public/savera-hardware.png" alt="Precision Fittings" class="product-img">
+          <img src="./images/savera-hardware.png" alt="Precision Fittings" class="product-img">
           <div class="card-overlay"></div>
           <h3 class="product-title">Precision Fittings</h3>
           <div class="view-now-btn">View Now &rarr;</div>
@@ -163,7 +175,7 @@
       <!-- Category 5 -->
       <div class="product-card clean-card" onclick="window.location.href='category-power.html'">
         <div class="product-img-wrapper">
-          <img src="./public/savera-power.png" alt="Power Controls" class="product-img">
+          <img src="./images/savera-power.png" alt="Power Controls" class="product-img">
           <div class="card-overlay"></div>
           <h3 class="product-title">Power Controls</h3>
           <div class="view-now-btn">View Now &rarr;</div>
@@ -172,7 +184,7 @@
       <!-- Category 6 -->
       <div class="product-card clean-card" onclick="window.location.href='category-lighting.html'">
         <div class="product-img-wrapper">
-          <img src="./public/savera-lighting.png" alt="Lighting" class="product-img">
+          <img src="./images/savera-lighting.png" alt="Lighting" class="product-img">
           <div class="card-overlay"></div>
           <h3 class="product-title">Lighting</h3>
           <div class="view-now-btn">View Now &rarr;</div>
@@ -181,7 +193,7 @@
       <!-- Category 7 -->
       <div class="product-card clean-card" onclick="window.location.href='category-paints.html'">
         <div class="product-img-wrapper">
-          <img src="./public/savera-paints.png" alt="Colour Finishes" class="product-img">
+          <img src="./images/savera-paints.png" alt="Colour Finishes" class="product-img">
           <div class="card-overlay"></div>
           <h3 class="product-title">Colour Finishes</h3>
           <div class="view-now-btn">View Now &rarr;</div>
@@ -190,7 +202,7 @@
       <!-- Category 8 -->
       <div class="product-card clean-card" onclick="window.location.href='category-kitchen.html'">
         <div class="product-img-wrapper">
-          <img src="./public/savera-kitchen.png" alt="Smart Storage" class="product-img">
+          <img src="./images/savera-kitchen.png" alt="Smart Storage" class="product-img">
           <div class="card-overlay"></div>
           <h3 class="product-title">Smart Storage</h3>
           <div class="view-now-btn">View Now &rarr;</div>
@@ -199,7 +211,7 @@
       <!-- Category 9 -->
       <div class="product-card clean-card" onclick="window.location.href='category-bedroom.html'">
         <div class="product-img-wrapper">
-          <img src="./public/product-chair.png" alt="Bedroom Solutions" class="product-img">
+          <img src="./images/product-chair.png" alt="Bedroom Solutions" class="product-img">
           <div class="card-overlay"></div>
           <h3 class="product-title">Bedroom Solutions</h3>
           <div class="view-now-btn">View Now &rarr;</div>
@@ -208,7 +220,7 @@
       <!-- Category 10 -->
       <div class="product-card clean-card" onclick="window.location.href='category-decorative.html'">
         <div class="product-img-wrapper">
-          <img src="./public/product-lamp.png" alt="Decorative Finish" class="product-img">
+          <img src="./images/product-lamp.png" alt="Decorative Finish" class="product-img">
           <div class="card-overlay"></div>
           <h3 class="product-title">Decorative Finish</h3>
           <div class="view-now-btn">View Now &rarr;</div>
@@ -217,7 +229,7 @@
       <!-- Category 11 -->
       <div class="product-card clean-card" onclick="window.location.href='category-accessories.html'">
         <div class="product-img-wrapper">
-          <img src="./public/product-table.png" alt="Finishing Details" class="product-img">
+          <img src="./images/product-table.png" alt="Finishing Details" class="product-img">
           <div class="card-overlay"></div>
           <h3 class="product-title">Finishing Details</h3>
           <div class="view-now-btn">View Now &rarr;</div>
@@ -281,7 +293,7 @@
         <p class="about-desc">A material-led experience for customers who want to understand the grain, sheen, depth and strength behind every selection.</p>
       </div>
       <div class="about-img-container">
-        <img src="./public/lifestyle-about.png" alt="Bright organic living room" class="about-img">
+        <img src="./images/lifestyle-about.png" alt="Bright organic living room" class="about-img">
       </div>
     </div>
   </section>
@@ -305,13 +317,13 @@
     
     <div class="three-col-grid">
       <div class="category-card" style="aspect-ratio: 4/5; position: relative; border-radius: 20px; overflow: hidden;">
-        <img src="./public/kitchen-set.png" alt="Kitchen Project" style="width: 100%; height: 100%; object-fit: cover;">
+        <img src="./images/kitchen-set.png" alt="Kitchen Project" style="width: 100%; height: 100%; object-fit: cover;">
       </div>
       <div class="category-card" style="aspect-ratio: 4/5; position: relative; border-radius: 20px; overflow: hidden;">
-        <img src="./public/living-room.png" alt="Living Room Project" style="width: 100%; height: 100%; object-fit: cover;">
+        <img src="./images/living-room.png" alt="Living Room Project" style="width: 100%; height: 100%; object-fit: cover;">
       </div>
       <div class="category-card" style="aspect-ratio: 4/5; position: relative; border-radius: 20px; overflow: hidden;">
-        <img src="./public/bedroom.png" alt="Bedroom Project" style="width: 100%; height: 100%; object-fit: cover;">
+        <img src="./images/bedroom.png" alt="Bedroom Project" style="width: 100%; height: 100%; object-fit: cover;">
       </div>
     </div>
   </section>

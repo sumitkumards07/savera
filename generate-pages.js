@@ -138,13 +138,13 @@ const generateTemplate = (cat) => `
   <meta property="og:type" content="website">
   <meta property="og:title" content="${cat.name} | Savera Enterprises Showroom">
   <meta property="og:description" content="${cat.desc}">
-  <meta property="og:image" content="https://www.saveraenterprises.com/public/${cat.img}">
+  <meta property="og:image" content="https://www.saveraenterprises.com/images/${cat.img}">
   
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${cat.name} | Savera Enterprises">
   <meta name="twitter:description" content="${cat.desc}">
-  <meta name="twitter:image" content="https://www.saveraenterprises.com/public/${cat.img}">
+  <meta name="twitter:image" content="https://www.saveraenterprises.com/images/${cat.img}">
 
   <title>${cat.name} | Savera Enterprises</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -254,7 +254,7 @@ const generateTemplate = (cat) => `
       <p class="cat-desc">${cat.desc}</p>
     </div>
     <div class="cat-img-wrapper hero-img-anim">
-      <img src="./public/${cat.img}" alt="${cat.name}" class="cat-img">
+      <img src="./images/${cat.img}" alt="${cat.name}" class="cat-img">
     </div>
   </main>
 
@@ -265,7 +265,7 @@ const generateTemplate = (cat) => `
         ${cat.products.map(p => `
         <div class="reveal-el" style="border-radius: 20px; overflow: hidden; background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.03); display: flex; flex-direction: column;">
           <div style="aspect-ratio: 1/1; overflow: hidden; position: relative;">
-            <img src="./public/${p.img}" alt="${p.name}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            <img src="./images/${p.img}" alt="${p.name}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           </div>
           <div style="padding: 1.5rem; text-align: center;">
             <h3 style="font-family: var(--font-sans); font-weight: 600; font-size: 1.2rem; color: var(--charcoal); margin: 0;">${p.name}</h3>
