@@ -319,7 +319,70 @@
     </div>
   </section>
 
-  <!-- Customer Words -->
+  
+  <!-- Design Journal Section -->
+  <section class="journal-section" style="padding: 6rem 5%; background-color: var(--bg-color);">
+    <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+      <h2 class="section-title">Design Journal</h2>
+      <p style="font-size: 1.2rem; color: #555; max-width: 600px; margin: 0 auto; margin-top: 1rem; line-height: 1.6;">Installed details, edited like a design journal. Explore Savera's completed customer interiors.</p>
+    </div>
+    
+    <!-- Filters -->
+    <div class="journal-filters" style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 4rem; flex-wrap: wrap;">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="kitchen">Kitchen</button>
+      <button class="filter-btn" data-filter="bathroom">Bathroom</button>
+      <button class="filter-btn" data-filter="living">Living</button>
+    </div>
+    
+    <!-- Gallery Grid -->
+    <div class="journal-grid">
+      <div class="journal-item" data-category="kitchen">
+        <img src="./images/savera-kitchen.jpg" alt="Kitchen Interior" loading="lazy">
+        <div class="journal-overlay">
+          <h3>Modern Modular Kitchen</h3>
+          <p>Boring Road</p>
+        </div>
+      </div>
+      <div class="journal-item" data-category="living">
+        <img src="./images/living-room.jpg" alt="Living Room" loading="lazy">
+        <div class="journal-overlay">
+          <h3>Minimalist Living Space</h3>
+          <p>Patliputra</p>
+        </div>
+      </div>
+      <div class="journal-item" data-category="bathroom">
+        <img src="./images/lifestyle-about.jpg" alt="Luxury Bathroom" loading="lazy">
+        <div class="journal-overlay">
+          <h3>Stone & Hardware Detail</h3>
+          <p>Kankarbagh</p>
+        </div>
+      </div>
+      <div class="journal-item" data-category="kitchen">
+        <img src="./images/kitchen-set.jpg" alt="Kitchen Island" loading="lazy">
+        <div class="journal-overlay">
+          <h3>Kitchen Island Finish</h3>
+          <p>Bailey Road</p>
+        </div>
+      </div>
+      <div class="journal-item" data-category="living">
+        <img src="./images/savera-lighting.jpg" alt="Living Lighting" loading="lazy">
+        <div class="journal-overlay">
+          <h3>Accent Lighting Setup</h3>
+          <p>Frazer Road</p>
+        </div>
+      </div>
+      <div class="journal-item" data-category="bathroom">
+        <img src="./images/product-lamp.jpg" alt="Bathroom Decor" loading="lazy">
+        <div class="journal-overlay">
+          <h3>Premium Fixtures</h3>
+          <p>Gandhi Maidan</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Customer Words -->
   <section class="products-section" style="background-color: var(--bg-color);">
     <div class="section-header" style="text-align: center; margin-bottom: 4rem; max-width: 100%;">
       <h2 class="section-title">Customer Words</h2>
@@ -447,5 +510,39 @@
       }, 4000);
     }
   </script>
+
+  <script>
+    // Journal Filter Logic
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const journalItems = document.querySelectorAll('.journal-item');
+      
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          
+          const filter = btn.getAttribute('data-filter');
+          
+          journalItems.forEach(item => {
+            if (filter === 'all' || item.getAttribute('data-category') === filter) {
+              item.style.display = 'block';
+              setTimeout(() => {
+                item.style.opacity = '1';
+                item.style.transform = 'scale(1)';
+              }, 50);
+            } else {
+              item.style.opacity = '0';
+              item.style.transform = 'scale(0.95)';
+              setTimeout(() => {
+                item.style.display = 'none';
+              }, 400);
+            }
+          });
+        });
+      });
+    });
+  </script>
 </body>
+
 </html>
