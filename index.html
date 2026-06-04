@@ -138,14 +138,24 @@
         
     <div style="margin-bottom: 3rem;">
       <h3 style="font-family: var(--font-serif); font-size: 2rem; color: var(--charcoal); margin-bottom: 1.5rem; padding: 0 5%;">Core & Structural</h3>
-      <div class="manual-scroll-track">
+      <div class="manual-scroll-track auto-scroll-track">
+
         <div class="product-card clean-card" onclick="window.location.href='category-frame.html'">
         <div class="product-img-wrapper">
           <img src="./images/savera-frame.jpg" alt="Frame Solutions" class="product-img" loading="lazy">
           <div class="card-overlay"></div>
           <h3 class="product-title">Frame Solutions</h3>
-          <div class="view-now-btn">View Now &rarr;</div>
-        </div>
+          <div class="view-now-btn">View Now &rarr;
+        <!-- Duplicates for seamless infinite scroll -->
+
+        <div class="product-card clean-card" onclick="window.location.href='category-frame.html'">
+        <div class="product-img-wrapper">
+          <img src="./images/savera-frame.jpg" alt="Frame Solutions" class="product-img" loading="lazy">
+          <div class="card-overlay"></div>
+          <h3 class="product-title">Frame Solutions</h3>
+          <div class="view-now-btn">View Now &rarr;
+      </div>
+    </div>
         <div class="product-card clean-card" onclick="window.location.href='category-electrical.html'">
         <div class="product-img-wrapper">
           <img src="./images/savera-electrical.jpg" alt="Electrical Essentials" class="product-img" loading="lazy">
@@ -164,14 +174,24 @@
     </div>
     <div style="margin-bottom: 3rem;">
       <h3 style="font-family: var(--font-serif); font-size: 2rem; color: var(--charcoal); margin-bottom: 1.5rem; padding: 0 5%;">Finishes & Decor</h3>
-      <div class="manual-scroll-track">
+      <div class="manual-scroll-track auto-scroll-track">
+
         <div class="product-card clean-card" onclick="window.location.href='category-entrances.html'">
         <div class="product-img-wrapper">
           <img src="./images/savera-entrances.jpg" alt="Entrances" class="product-img" loading="lazy">
           <div class="card-overlay"></div>
           <h3 class="product-title">Entrances</h3>
-          <div class="view-now-btn">View Now &rarr;</div>
-        </div>
+          <div class="view-now-btn">View Now &rarr;
+        <!-- Duplicates for seamless infinite scroll -->
+
+        <div class="product-card clean-card" onclick="window.location.href='category-entrances.html'">
+        <div class="product-img-wrapper">
+          <img src="./images/savera-entrances.jpg" alt="Entrances" class="product-img" loading="lazy">
+          <div class="card-overlay"></div>
+          <h3 class="product-title">Entrances</h3>
+          <div class="view-now-btn">View Now &rarr;
+      </div>
+    </div>
         <div class="product-card clean-card" onclick="window.location.href='category-lighting.html'">
         <div class="product-img-wrapper">
           <img src="./images/savera-lighting.jpg" alt="Lighting" class="product-img" loading="lazy">
@@ -197,14 +217,24 @@
     </div>
     <div style="margin-bottom: 3rem;">
       <h3 style="font-family: var(--font-serif); font-size: 2rem; color: var(--charcoal); margin-bottom: 1.5rem; padding: 0 5%;">Fittings & Furniture</h3>
-      <div class="manual-scroll-track">
+      <div class="manual-scroll-track auto-scroll-track">
+
         <div class="product-card clean-card" onclick="window.location.href='category-hardware.html'">
         <div class="product-img-wrapper">
           <img src="./images/savera-hardware.jpg" alt="Precision Fittings" class="product-img" loading="lazy">
           <div class="card-overlay"></div>
           <h3 class="product-title">Precision Fittings</h3>
-          <div class="view-now-btn">View Now &rarr;</div>
-        </div>
+          <div class="view-now-btn">View Now &rarr;
+        <!-- Duplicates for seamless infinite scroll -->
+
+        <div class="product-card clean-card" onclick="window.location.href='category-hardware.html'">
+        <div class="product-img-wrapper">
+          <img src="./images/savera-hardware.jpg" alt="Precision Fittings" class="product-img" loading="lazy">
+          <div class="card-overlay"></div>
+          <h3 class="product-title">Precision Fittings</h3>
+          <div class="view-now-btn">View Now &rarr;
+      </div>
+    </div>
         <div class="product-card clean-card" onclick="window.location.href='category-kitchen.html'">
         <div class="product-img-wrapper">
           <img src="./images/savera-kitchen.jpg" alt="Smart Storage" class="product-img" loading="lazy">
@@ -540,6 +570,41 @@
             }
           });
         });
+      });
+    });
+  </script>
+
+  <script>
+    // Auto + Manual Scroll Logic for Categories
+    document.addEventListener('DOMContentLoaded', () => {
+      const tracks = document.querySelectorAll('.auto-scroll-track');
+      
+      tracks.forEach(track => {
+        let isHovered = false;
+        
+        // Pause on hover/touch
+        track.addEventListener('mouseenter', () => isHovered = true);
+        track.addEventListener('mouseleave', () => isHovered = false);
+        track.addEventListener('touchstart', () => isHovered = true);
+        track.addEventListener('touchend', () => {
+          setTimeout(() => isHovered = false, 1000); // delay resume
+        });
+
+        const autoScroll = () => {
+          if (!isHovered) {
+            track.scrollLeft += 1;
+            
+            // Seamless loop: if scrolled past halfway, jump back to 0
+            // Since we duplicated exact content, halfway is scrollWidth / 2
+            if (track.scrollLeft >= track.scrollWidth / 2) {
+              track.scrollLeft = 0;
+            }
+          }
+          requestAnimationFrame(autoScroll);
+        };
+        
+        // Start animation loop
+        requestAnimationFrame(autoScroll);
       });
     });
   </script>

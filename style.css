@@ -1063,7 +1063,6 @@ body {
   display: flex;
   gap: 2rem;
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
   margin: 0 -5.55%;
   padding: 1rem 5.55% 2rem 5.55%;
   scrollbar-width: none;
@@ -1074,7 +1073,6 @@ body {
 }
 .manual-scroll-track > .product-card {
   flex: 0 0 calc(33.333% - 1.33rem);
-  scroll-snap-align: start;
 }
 @media (max-width: 1024px) {
   .manual-scroll-track > .product-card {
