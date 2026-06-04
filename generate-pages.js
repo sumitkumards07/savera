@@ -147,7 +147,7 @@ const generateTemplate = (cat) => `
   <meta name="twitter:image" content="https://www.saveraenterprises.com/images/${cat.img}">
 
   <title>${cat.name} | Savera Enterprises</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
     .cat-hero {

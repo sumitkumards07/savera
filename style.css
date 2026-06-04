@@ -2,7 +2,7 @@
   --bg-color: #F5F2ED;
   --sage-green: #5C7A6A;
   --charcoal: #1C1C1C;
-  --font-serif: 'DM Serif Display', serif;
+  --font-serif: 'Outfit', sans-serif;
   --font-sans: 'Inter', sans-serif;
 }
 
@@ -51,7 +51,7 @@ body {
 .logo-text {
   font-family: var(--font-serif);
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 800;
   letter-spacing: 0.5px;
 }
 
@@ -101,11 +101,12 @@ body {
 .line-one {
   font-family: var(--font-serif);
   font-size: 4.5rem;
-  font-weight: 400;
+  font-weight: 800;
 }
 
 .line-two {
   font-size: 4.5rem;
+  font-weight: 800;
   display: flex;
   gap: 1rem;
   align-items: baseline;
@@ -117,7 +118,7 @@ body {
 
 .charcoal-bold {
   font-family: var(--font-serif);
-  font-weight: 400;
+  font-weight: 900;
   color: var(--charcoal);
 }
 
@@ -341,7 +342,8 @@ body {
   font-family: var(--font-serif);
   font-size: 3.5rem;
   color: var(--charcoal);
-  font-weight: 400;
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
 
 .categories-subtitle {
@@ -412,8 +414,8 @@ body {
 
 .category-name {
   font-family: var(--font-serif);
-  font-size: 2rem;
-  font-weight: 400;
+  font-size: 2.2rem;
+  font-weight: 800;
   margin-bottom: 0.25rem;
 }
 
@@ -472,9 +474,10 @@ body {
 
 .section-title {
   font-family: var(--font-serif);
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: var(--charcoal);
-  font-weight: 400;
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
 
 .view-all-link {
@@ -677,8 +680,9 @@ body {
 .newsletter-title {
   font-family: var(--font-serif);
   font-size: 3rem;
-  font-weight: 400;
-  margin-bottom: 1rem;
+  font-weight: 800;
+  color: var(--charcoal);
+  margin-bottom: 2rem;
 }
 
 .newsletter-desc {
