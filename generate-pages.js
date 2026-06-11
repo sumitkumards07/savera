@@ -2,29 +2,18 @@ const fs = require('fs');
 
 const categories = [
   { 
-    id: 'electrical', name: 'Electrical Essentials', desc: 'Secure, clean, and reliable architectural installations.', img: 'savera-electrical.jpg',
+    id: 'electrical-pipe', name: 'Electrical Pipe', desc: 'High-quality PVC conduit pipes and robust electrical piping solutions.', img: 'savera-electrical.jpg',
     products: [
-      { name: 'Premium Switch Plate', img: 'premium_switch_plate.jpg' },
       { name: 'PVC Conduit Pipe', img: 'pvc_conduit_pipe.jpg' },
-      { name: 'Modular Fan Box', img: 'modular_fan_box.jpg' },
-      { name: 'MCB Box', img: 'mcb_box.jpg' },
-      { name: 'Concealed Housing', img: 'concealed_housing.jpg' },
-      { name: 'Flame Retardant Wire', img: 'fr_wire.jpg' }
+      { name: 'Flexible Corrugated Pipe', img: 'savera-electrical.jpg' },
+      { name: 'Casing n Capping', img: 'savera-power.jpg' },
+      { name: 'UPVC Pipe', img: 'savera-electrical.jpg' },
+      { name: 'CPVC Pipe', img: 'pvc_conduit_pipe.jpg' },
+      { name: 'Pipe Fittings', img: 'savera-hardware.jpg' }
     ]
   },
   { 
-    id: 'frame', name: 'Frame Solutions', desc: 'Sturdy and reliable door frame options with matching premium finishes.', img: 'savera-frame.jpg',
-    products: [
-      { name: 'Teak Wood Frame', img: 'teak_wood_frame.jpg' },
-      { name: 'Sal Wood Frame', img: 'sal_wood_frame.jpg' },
-      { name: 'Aluminum Profile', img: 'aluminum_profile.jpg' },
-      { name: 'WPC Door Frame', img: 'wpc_door_frame.jpg' },
-      { name: 'Hardwood Chaukhat', img: 'hardwood_chaukhat.jpg' },
-      { name: 'UPVC Window Frame', img: 'upvc_window_frame.jpg' }
-    ]
-  },
-  { 
-    id: 'entrances', name: 'Entrances', desc: 'Designer wooden, flush, and PVC doors crafted for stunning homes.', img: 'savera-entrances.jpg',
+    id: 'doors', name: 'Doors', desc: 'Designer wooden, flush, and PVC doors crafted for stunning homes.', img: 'savera-entrances.jpg',
     products: [
       { name: 'Solid Teak Door', img: 'teak_door.jpg' },
       { name: 'Premium Flush Door', img: 'flush_door.jpg' },
@@ -35,7 +24,7 @@ const categories = [
     ]
   },
   { 
-    id: 'hardware', name: 'Precision Fittings', desc: 'Premium locks, handles, hinges, channels, and heavy-duty glass fittings.', img: 'savera-hardware.jpg',
+    id: 'hardware-fittings', name: 'Hardware & Fittings', desc: 'Premium locks, handles, hinges, channels, and heavy-duty fittings.', img: 'savera-hardware.jpg',
     products: [
       { name: 'Heavy Duty Hinges', img: 'savera-hardware.jpg' },
       { name: 'Soft Close Channels', img: 'product-table.jpg' },
@@ -46,29 +35,29 @@ const categories = [
     ]
   },
   { 
-    id: 'power', name: 'Power Controls', desc: 'High-quality wires, elegant switch plates, and advanced electrical controls.', img: 'savera-power.jpg',
+    id: 'wire-switches', name: 'Wire & Switch Plate', desc: 'High-quality wires, elegant switch plates, and advanced electrical controls.', img: 'savera-power.jpg',
     products: [
       { name: 'Modular Switches', img: 'savera-power.jpg' },
-      { name: 'Distribution Boards', img: 'savera-electrical.jpg' },
+      { name: 'Flame Retardant Wire', img: 'fr_wire.jpg' },
+      { name: 'Premium Switch Plate', img: 'premium_switch_plate.jpg' },
       { name: 'Wire Coils', img: 'savera-power.jpg' },
-      { name: 'Stabilizers', img: 'product-lamp.jpg' },
       { name: 'Smart Touch Switches', img: 'savera-lighting.jpg' },
-      { name: 'Changeover Switches', img: 'savera-electrical.jpg' }
+      { name: 'Distribution Boards', img: 'savera-electrical.jpg' }
     ]
   },
   { 
-    id: 'lighting', name: 'Lighting', desc: 'Curated lighting choices for warm ceilings, bright kitchens, and display areas.', img: 'savera-lighting.jpg',
+    id: 'lighting-fan', name: 'Lighting & Fan', desc: 'Curated lighting choices and premium fans for your spaces.', img: 'savera-lighting.jpg',
     products: [
       { name: 'LED Panel Lights', img: 'savera-lighting.jpg' },
-      { name: 'Profile Lighting', img: 'product-lamp.jpg' },
-      { name: 'Spotlights', img: 'savera-lighting.jpg' },
+      { name: 'Designer Ceiling Fans', img: 'product-lamp.jpg' },
       { name: 'Modern Chandelier', img: 'product-lamp.jpg' },
       { name: 'Wall Sconces', img: 'savera-lighting.jpg' },
-      { name: 'Track Lights', img: 'savera-power.jpg' }
+      { name: 'Exhaust Fans', img: 'savera-electrical.jpg' },
+      { name: 'Profile Lighting', img: 'product-lamp.jpg' }
     ]
   },
   { 
-    id: 'paints', name: 'Colour Finishes', desc: 'Luxury wall paints, rich textures, waterproofing, and beautifully refined colour finishes.', img: 'savera-paints.jpg',
+    id: 'paints', name: 'Paints', desc: 'Luxury wall paints, rich textures, waterproofing, and beautifully refined colour finishes.', img: 'savera-paints.jpg',
     products: [
       { name: 'Exterior Emulsion', img: 'savera-paints.jpg' },
       { name: 'Interior Luxury Paint', img: 'savera-paints.jpg' },
@@ -79,7 +68,7 @@ const categories = [
     ]
   },
   { 
-    id: 'kitchen', name: 'Smart Storage', desc: 'Modular kitchen baskets, smooth channels, modern handles, and pull-outs.', img: 'savera-kitchen.jpg',
+    id: 'modular-kitchen', name: 'Modular Kitchen', desc: 'Modular kitchen baskets, smooth channels, modern handles, and pull-outs.', img: 'savera-kitchen.jpg',
     products: [
       { name: 'Tandem Boxes', img: 'savera-kitchen.jpg' },
       { name: 'Cutlery Organizers', img: 'product-table.jpg' },
@@ -90,7 +79,7 @@ const categories = [
     ]
   },
   { 
-    id: 'bedroom', name: 'Bedroom Solutions', desc: 'Durable materials and soft-close fittings for elegant wardrobes and custom beds.', img: 'product-chair.jpg',
+    id: 'wardrobe-bed', name: 'Wardrobe & Bed', desc: 'Durable materials and soft-close fittings for elegant wardrobes and custom beds.', img: 'product-chair.jpg',
     products: [
       { name: 'Sliding Wardrobe Channels', img: 'savera-hardware.jpg' },
       { name: 'Hydraulic Bed Fittings', img: 'product-chair.jpg' },
@@ -101,7 +90,7 @@ const categories = [
     ]
   },
   { 
-    id: 'decorative', name: 'Decorative Finish', desc: 'Exquisite decorative surfaces, veneers, laminates, and metallic finishing accents.', img: 'product-lamp.jpg',
+    id: 'decorative-products', name: 'Decorative Products', desc: 'Exquisite decorative surfaces, veneers, laminates, and metallic finishing accents.', img: 'product-lamp.jpg',
     products: [
       { name: 'Premium Veneer', img: 'product-table.jpg' },
       { name: 'High Gloss Laminate', img: 'savera-entrances.jpg' },
@@ -112,7 +101,7 @@ const categories = [
     ]
   },
   { 
-    id: 'accessories', name: 'Finishing Details', desc: 'Essential finishing accessories for doors, custom cabinets, and smart storage units.', img: 'product-table.jpg',
+    id: 'accessories', name: 'Accessories', desc: 'Essential finishing accessories for doors, custom cabinets, and smart storage units.', img: 'product-table.jpg',
     products: [
       { name: 'Door Stoppers', img: 'savera-hardware.jpg' },
       { name: 'Tower Bolts', img: 'product-table.jpg' },
